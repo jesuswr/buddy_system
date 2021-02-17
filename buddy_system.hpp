@@ -19,9 +19,6 @@ class buddy_system
     // starting at i
     vector< set<int> > free_bucket;
 
-    // same as free_bucket but with reserved blocks
-    vector< set<int> > reserved_bucket;
-
     // vector of booleans, if is_free[i] is true then position i
     // its free, else its reseverd
     vector< bool > is_free;
@@ -36,6 +33,8 @@ public:
     ~buddy_system();
     int reserve(string id, int size);
     int free(string id);
+    void show();
+    void print_error(int code);
 };
 
 
