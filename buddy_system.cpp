@@ -60,7 +60,7 @@ int buddy_system::reserve(string id, int size) {
     // the asked size
     int pow = 0;
     while ((1 << pow) < size) ++pow;
-    while (free_bucket[pow].empty() && pow <= mx_pow) ++pow;
+    while (pow <= mx_pow && free_bucket[pow].empty()) ++pow;
     // error if there is no memory block to give
     if (pow > mx_pow) return -3;
 
