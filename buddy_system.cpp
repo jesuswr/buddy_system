@@ -133,7 +133,7 @@ int buddy_system::free(string id) {
     function to print the status of the memory
 */
 void buddy_system::show() {
-    printf("REPRESENTACION DE LA MEMORIA (1 ES FREE, 0 ES RESERVADO):\n");
+    printf("REPRESENTACION DE LA MEMORIA (1 ES LIBRE, 0 ES RESERVADO):\n");
     for (auto f : is_free) printf("%d ", (int)f);
     printf("\n\n");
 
