@@ -1,5 +1,5 @@
-#ifndef _MULTILAYER_PERCEPTRON_HPP
-#define _MULTILAYER_PERCEPTRON_HPP
+#ifndef _BUDDY_SYSTEM_HPP
+#define _BUDDY_SYSTEM_HPP
 
 #include <vector>
 #include <iostream>
