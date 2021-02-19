@@ -5,7 +5,7 @@
 
 using namespace std;
 
-TEST_CASE("buddy system tests") {
+TEST_CASE("buddy system test 1") {
     buddy_system my_buddy(16);
 
     // return 0 meaning reserve succeded
@@ -43,7 +43,22 @@ TEST_CASE("buddy system tests") {
 
     // reserve a negative number of blocks
     REQUIRE( my_buddy.reserve("nop", -1) < 0 );
-
-    my_buddy.show();
 }
 
+
+
+TEST_CASE("buddy system test 2") {
+    // here we will test the show function, sorry but
+    // you will have to check it on the console:(
+    buddy_system my_b(31);
+    my_b.show();
+
+    REQUIRE( my_b.reserve("id1", 15) == 0 );
+    REQUIRE( my_b.reserve("id2", 1) == 0 );
+    my_b.show();
+
+    REQUIRE( my_b.free("id1") == 0 );
+    my_b.show();
+    REQUIRE( my_b.free("id2") == 0 );
+    my_b.show();
+}
